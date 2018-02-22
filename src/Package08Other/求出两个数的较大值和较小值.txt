@@ -1,0 +1,5 @@
+不使用比较运算符 求出两个数的最大值和最小值：
+
+Max = (  (long)a + (long)b + Math.abs( (long)a-(long)b )  )/2;
+
+Min = (  (long)a + (long)b - Math.abs( (long)a-(long)b )  )/2;
