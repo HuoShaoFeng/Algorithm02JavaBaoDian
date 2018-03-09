@@ -3,6 +3,9 @@ package Package03Sort;
 public class BubbleSort {
 
 	public static void main(String[] args) {
+		
+		
+		
 		int[] srcArr = new int[]{6,5,12,-13,1,9,3,5};
 		for (int i = 0; i < srcArr.length; i++) {
 			System.out.print(srcArr[i]+"   ");
@@ -14,6 +17,7 @@ public class BubbleSort {
 			System.out.print(srcArr[i]+"   ");
 		}
 		
+	
 		
 	}
 	
