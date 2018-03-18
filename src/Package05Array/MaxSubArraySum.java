@@ -3,9 +3,37 @@ package Package05Array;
 public class MaxSubArraySum {
 
     public static void main(String[] args) {
-        int[] arr = new int[]{1,-2,4,8,4,7,-1,-5};
+        int[] arr = new int[]{-4,-1,-2,-5};
         System.out.println("子数组的最大和是：");
         System.out.println(getMaxSum(arr));
+        
+        int[] arr1 = new int[]{-4,-2,-1,-5};
+        System.out.println("最大和= "+getMax(arr1));
+        System.out.println("起始位置："+index[0]+", "+index[1]);   
+    }
+    
+    //获取连续子数组的最大和 以及起始位置
+    static int[] index = new int[2];
+    public static int getMax(int[] arr){
+        int max = arr[0];
+        int sum = 0;
+        int start = 0;
+        for (int i=0;i<arr.length;++i){
+            
+            if (sum<0){
+                sum=arr[i];
+                start=i;
+            }
+            else 
+            	sum += arr[i];
+            if(max<sum){
+                    max=sum;
+                    index[0]=start;
+                    index[1]=i;
+                    
+            }
+        }
+        return max;
     }
 
     /**
@@ -23,5 +51,11 @@ public class MaxSubArraySum {
         }
         return All[arr.length-1];
     }
+    
+    
+    
+    
+    
+    
 }
 
